@@ -100,6 +100,21 @@
       color: var(--rose-deep);
       border-color: var(--rose-soft);
     }
+    .nav-cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .nav-cv-icon {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      flex: 0 0 auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 3.5h6.7L18 7.8V20.5H7z' stroke='%234a4540' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M13.7 3.5v4.3H18' stroke='%234a4540' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
 
     /* ── HERO ── */
     #hero {
@@ -217,7 +232,6 @@
     /* ── ABOUT ── */
     #about { background: var(--warm-white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; align-items: start; }
-    .about-left {}
     .about-quote {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.55rem; font-weight: 300; font-style: italic;
@@ -273,7 +287,11 @@
       border-color: var(--rose-light);
     }
     .skill-group-icon {
-      font-size: 1.4rem; margin-bottom: 1rem;
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1rem;
     }
     .skill-group-title {
       font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -364,9 +382,13 @@
       background: linear-gradient(135deg, white 60%, var(--rose-light) 100%);
     }
     .edu-card.featured::before {
-      content: '★';
-      position: absolute; top: 1.2rem; right: 1.4rem;
-      color: var(--rose-accent); font-size: 1rem;
+      content: '';
+      position: absolute;
+      top: 1.15rem;
+      right: 1.25rem;
+      width: 18px;
+      height: 18px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 2.8l2.7 5.46 6.03.88-4.37 4.26 1.03 6.01L12 16.6 6.61 19.41l1.03-6.01L3.27 9.14l6.03-.88L12 2.8Z' fill='%23e89999'/%3E%3C/svg%3E") center/contain no-repeat;
     }
     .edu-school {
       font-family: 'Cormorant Garamond', serif;
@@ -452,6 +474,9 @@
       display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
     }
     .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
       color: var(--cream); text-decoration: none;
       font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
       border: 1px solid rgba(255,255,255,0.15);
@@ -462,6 +487,19 @@
     .contact-link:hover {
       background: var(--rose-deep); border-color: var(--rose-deep);
     }
+    .contact-link-icon {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      flex: 0 0 auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .icon-mail { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 6.5h16v11H4v-11Zm0 0 8 6.2 8-6.2' stroke='%23faf8f5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .icon-linkedin { background-image: url("https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/LinkedIn.svg"); }
+    .icon-github { background-image: url("https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg"); }
+    .icon-phone { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M8.4 5.2 10 7.9c.3.5.2 1.1-.2 1.5l-1.4 1.4c.9 1.8 2.4 3.4 4.2 4.2l1.4-1.4c.4-.4 1-.5 1.5-.2l2.7 1.6c.5.3.8.8.8 1.3 0 1.9-1.6 3.5-3.5 3.5-6.9 0-12.5-5.6-12.5-12.5 0-1.9 1.6-3.5 3.5-3.5.5 0 1 .3 1.3.8Z' stroke='%23faf8f5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 
     /* ── FOOTER ── */
     footer {
@@ -508,11 +546,77 @@
       }
       .nav-actions a { padding: 0.45rem 0.8rem; }
       #hero { grid-template-columns: 1fr; padding: 7rem 2rem 3rem; }
-      .hero-visual { align-items: flex-start; }
-      .hero-card { width: 100%; }
+      .hero-text { text-align: center; }
+      .hero-subtitle { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .hero-visual { align-items: center; margin-top: 2.25rem; }
+      .hero-card { width: min(100%, 360px); }
       section { padding: 4rem 2rem; }
       .about-grid, .projects-grid, .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
+      .about-left,
+      .about-grid > div:last-child,
+      .projects-grid,
+      .edu-grid,
+      .lang-row,
+      #contact .reveal {
+        text-align: center;
+      }
+      .about-left .divider,
+      #contact .divider,
+      .reveal > .divider {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about-quote {
+        border-left: 0;
+        border-top: 2px solid var(--rose-accent);
+        padding-left: 0;
+        padding-top: 1rem;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about-details {
+        justify-content: center;
+      }
+      .about-detail,
+      .project-card,
+      .edu-card,
+      .lang-item {
+        text-align: center;
+      }
+      .project-card,
+      .edu-card {
+        align-items: center;
+      }
+      .project-period,
+      .project-org,
+      .tech-badge,
+      .edu-period,
+      .edu-note,
+      .edu-score-label {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .project-desc {
+        max-width: 38rem;
+      }
+      .project-desc li {
+        padding-left: 0;
+      }
+      .project-desc li::before {
+        position: static;
+        margin-right: 0.35rem;
+      }
+      .contact-links {
+        gap: 1rem;
+      }
+      footer {
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: center;
+      }
     }
 
     @media (max-width: 600px) {
@@ -531,11 +635,28 @@
       #hero {
         padding: 6.5rem 1rem 2.5rem;
       }
+      .hero-text,
+      .about-left,
+      .about-grid > div:last-child,
+      .projects-grid,
+      .edu-grid,
+      .lang-row,
+      #contact .reveal {
+        text-align: center;
+      }
+      .hero-visual,
+      .hero-cta,
+      .contact-links,
+      .lang-row {
+        justify-content: center;
+      }
+      .hero-card { width: 100%; max-width: 340px; }
       .hero-name {
         font-size: clamp(2.6rem, 12vw, 4rem);
       }
       .hero-subtitle {
         font-size: 0.95rem;
+        max-width: 34rem;
       }
       .hero-cta {
         gap: 0.75rem;
@@ -550,8 +671,19 @@
       .about-details {
         grid-template-columns: 1fr;
       }
+      .about-quote {
+        max-width: 100%;
+      }
       .lang-item {
         min-width: 100%;
+      }
+      .project-card,
+      .edu-card {
+        padding: 1.8rem 1.4rem;
+      }
+      .contact-link {
+        width: 100%;
+        justify-content: center;
       }
     }
   
@@ -585,8 +717,8 @@
       <li><a href="#contact">Contacto</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="./cv/CV_Eliandra_Neto.pdf" target="_blank" download>CV PT 🇵🇹</a>
-      <a href="./cv/Eliandra_Neto_Resume.pdf" target="_blank" download>CV EN 🇬🇧</a>
+      <a href="./cv/CV_Eliandra_Neto.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV PT</a>
+      <a href="./cv/Eliandra_Neto_Resume.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV EN</a>
     </div>
   </nav>
 
@@ -677,7 +809,7 @@
     </div>
     <div class="skills-grid">
       <div class="skill-group reveal" style="transition-delay:0.1s">
-        <div class="skill-group-icon">⚙️</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CS.svg" alt="C# e C" />
         <div class="skill-group-title">Linguagens</div>
         <div class="skill-tags">
           <span class="skill-tag rose">C</span>
@@ -687,7 +819,7 @@
         </div>
       </div>
       <div class="skill-group reveal" style="transition-delay:0.2s">
-        <div class="skill-group-icon">🌐</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/React-Dark.svg" alt="React" />
         <div class="skill-group-title">Frontend & Web</div>
         <div class="skill-tags">
           <span class="skill-tag rose">React</span>
@@ -696,7 +828,7 @@
         </div>
       </div>
       <div class="skill-group reveal" style="transition-delay:0.3s">
-        <div class="skill-group-icon">🗄️</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/PostgreSQL-Dark.svg" alt="PostgreSQL" />
         <div class="skill-group-title">Bases de Dados</div>
         <div class="skill-tags">
           <span class="skill-tag rose">MySQL</span>
@@ -704,7 +836,7 @@
         </div>
       </div>
       <div class="skill-group reveal" style="transition-delay:0.4s">
-        <div class="skill-group-icon">🐳</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Docker.svg" alt="Docker" />
         <div class="skill-group-title">DevOps & Infra</div>
         <div class="skill-tags">
           <span class="skill-tag rose">Docker</span>
@@ -713,7 +845,7 @@
         </div>
       </div>
       <div class="skill-group reveal" style="transition-delay:0.5s">
-        <div class="skill-group-icon">🛠️</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg" alt="Git" />
         <div class="skill-group-title">Ferramentas</div>
         <div class="skill-tags">
           <span class="skill-tag rose">Git</span>
@@ -722,7 +854,7 @@
         </div>
       </div>
       <div class="skill-group reveal" style="transition-delay:0.6s">
-        <div class="skill-group-icon">🤝</div>
+        <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/LinkedIn.svg" alt="Networking e colaboração" />
         <div class="skill-group-title">Soft Skills</div>
         <div class="skill-tags">
           <span class="skill-tag">Trabalho em equipa</span>
@@ -866,10 +998,10 @@
         Aberta a oportunidades, colaborações e projectos desafiantes. Não hesites em entrar em contacto.
       </p>
       <div class="contact-links">
-        <a href="mailto:eliandrasibol2@gmail.com" class="contact-link">✉ Email</a>
-        <a href="https://www.linkedin.com/in/eliandra-neto-63034730a/ target="_blank" class="contact-link">💼 LinkedIn</a>
-        <a href="https://github.com/EllyNeto" target="_blank" class="contact-link">🐙 GitHub</a>
-        <a href="tel:+244936647655" class="contact-link">📞 +244 936 647 655</a>
+        <a href="mailto:eliandrasibol2@gmail.com" class="contact-link"><span class="contact-link-icon icon-mail" aria-hidden="true"></span>Email</a>
+        <a href="https://www.linkedin.com/in/eliandra-neto-63034730a/" target="_blank" class="contact-link"><span class="contact-link-icon icon-linkedin" aria-hidden="true"></span>LinkedIn</a>
+        <a href="https://github.com/EllyNeto" target="_blank" class="contact-link"><span class="contact-link-icon icon-github" aria-hidden="true"></span>GitHub</a>
+        <a href="tel:+244936647655" class="contact-link"><span class="contact-link-icon icon-phone" aria-hidden="true"></span>+244 936 647 655</a>
       </div>
     </div>
   </section>
