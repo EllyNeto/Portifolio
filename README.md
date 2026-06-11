@@ -1,4 +1,4 @@
-# Portifolio — Eliandra Net0
+# Portifolio — Eliandra Neto
 
 Bem-vinda(o)! Este repositório contém o portfólio pessoal de Eliandra Neto: uma página estática e elegante que descreve competências, projetos, formação e meios de contacto. O objetivo é apresentar trabalhos e experiência de forma clara, profissional e acessível.
 
