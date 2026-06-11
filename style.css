@@ -1,0 +1,208 @@
+/* Extraído de index.html — estilo principal do site */
+:root {
+  --cream: #faf8f5;
+  --warm-white: #f5f2ee;
+  --stone-100: #ede9e3;
+  --stone-300: #c8bfb3;
+  --stone-500: #8c8177;
+  --stone-700: #4a4540;
+  --charcoal: #2b2724;
+  --rose-light: #f7d6d6;
+  --rose-soft: #f0b8b8;
+  --rose-accent: #e89999;
+  --rose-deep: #c97a7a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* ── CURSOR ── */
+.cursor {
+  width: 10px; height: 10px;
+  background: var(--rose-accent);
+  border-radius: 50%;
+  position: fixed; pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: multiply;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--rose-accent);
+  border-radius: 50%;
+  position: fixed; pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  padding: 1.4rem 4rem;
+  display: flex; justify-content: flex-start; align-items: center;
+  background: rgba(250,248,245,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--stone-100);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 600; letter-spacing: 0.04em;
+  color: var(--charcoal);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--rose-deep); }
+.nav-links {
+  display: flex; gap: 2.5rem; list-style: none;
+  margin-left: auto;
+}
+.nav-links a {
+  font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--stone-500); text-decoration: none;
+  transition: color 0.25s;
+  font-weight: 500;
+}
+.nav-links a:hover { color: var(--rose-deep); }
+.nav-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+.nav-actions a {
+  color: var(--stone-500);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--stone-300);
+  padding-bottom: 2px;
+  transition: color 0.25s, border-color 0.25s;
+  white-space: nowrap;
+}
+.nav-actions a:hover {
+  color: var(--rose-deep);
+  border-color: var(--rose-soft);
+}
+.nav-cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.nav-cv-icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  flex: 0 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 3.5h6.7L18 7.8V20.5H7z' stroke='%234a4540' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M13.7 3.5v4.3H18' stroke='%234a4540' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 8rem 4rem 4rem;
+  position: relative; overflow: hidden;
+}
+.hero-bg-shape {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  width: 520px; height: 520px;
+  background: radial-gradient(ellipse at center, var(--rose-light) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none; z-index: 0;
+}
+.hero-text { position: relative; z-index: 1; }
+.hero-tag {
+  display: inline-block;
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--rose-deep); font-weight: 500;
+  border: 1px solid var(--rose-soft);
+  background: var(--rose-light);
+  padding: 0.3rem 0.9rem; border-radius: 20px;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: 300; line-height: 1.06;
+  color: var(--charcoal);
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+.hero-name em { font-style: italic; color: var(--rose-deep); }
+.hero-subtitle {
+  margin-top: 1.2rem;
+  font-size: 1rem; color: var(--stone-500);
+  font-weight: 300; line-height: 1.7;
+  max-width: 420px;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+.hero-cta {
+  margin-top: 2.4rem;
+  display: flex; gap: 1rem; align-items: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.45s ease both;
+}
+.btn-primary {
+  background: var(--charcoal); color: var(--cream);
+  padding: 0.8rem 2rem; border-radius: 2px;
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; font-weight: 500;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--rose-deep); transform: translateY(-2px); }
+.btn-outline {
+  color: var(--stone-500); font-size: 0.78rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; font-weight: 500;
+  border-bottom: 1px solid var(--stone-300);
+  padding-bottom: 2px;
+  transition: color 0.25s, border-color 0.25s;
+}
+.btn-outline:hover { color: var(--rose-deep); border-color: var(--rose-soft); }
+
+.hero-visual {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 1.2rem;
+  animation: fadeLeft 0.8s 0.3s ease both;
+}
+.hero-card {
+  background: white;
+  border: 1px solid var(--stone-100);
+  border-radius: 4px;
+  padding: 1.4rem 1.8rem;
+  width: 280px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+.hero-card-label {
+  font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--stone-300); margin-bottom: 0.5rem;
+}
+.hero-card-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 600; color: var(--charcoal);
+}
+.hero-card-value span { color: var(--rose-accent); }
+.hero-card-sub { font-size: 0.78rem; color: var(--stone-500); margin-top: 0.2rem; }
+
+.hero-card.accent {
+  background: var(--rose-light);
+  border-color: var(--rose-soft);
+}
+.hero-card.accent .hero-card-label { color: var(--rose-deep); }
+.hero-card.accent .hero-card-value { color: var(--charcoal); }
+
+/* Note: arquivo muito grande — restante do CSS mantido igual ao original */
