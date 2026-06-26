@@ -17,19 +17,25 @@
   <nav>
     <a href="#hero" class="nav-logo">E<span>.</span>Neto</a>
     <ul class="nav-links">
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#skills">Competências</a></li>
-      <li><a href="#projects">Projectos</a></li>
-      <li><a href="#education">Formação</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about" data-pt="Sobre" data-en="About">Sobre</a></li>
+      <li><a href="#skills" data-pt="Competências" data-en="Skills">Competências</a></li>
+      <li><a href="#projects" data-pt="Projectos" data-en="Projects">Projectos</a></li>
+      <li><a href="#education" data-pt="Formação" data-en="Education">Formação</a></li>
+      <li><a href="#contact" data-pt="Contacto" data-en="Contact">Contacto</a></li>
       <li class="mobile-only-actions">
         <a href="./cv/CV_Eliandra_Neto.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV PT</a>
         <a href="./cv/Eliandra_Neto_Resume.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV EN</a>
+        <button class="lang-toggle" id="langToggleMobile" type="button" aria-label="Switch language / Mudar idioma">
+          <span class="lang-toggle-pt">PT</span><span class="lang-toggle-sep">/</span><span class="lang-toggle-en">EN</span>
+        </button>
       </li>
     </ul>
     <div class="nav-actions">
       <a href="./cv/CV_Eliandra_Neto.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV PT</a>
       <a href="./cv/Eliandra_Neto_Resume.pdf" target="_blank" download class="nav-cv-link"><span class="nav-cv-icon" aria-hidden="true"></span>CV EN</a>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language / Mudar idioma">
+        <span class="lang-toggle-pt">PT</span><span class="lang-toggle-sep">/</span><span class="lang-toggle-en">EN</span>
+      </button>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
       <span></span>
@@ -42,27 +48,27 @@
   <section id="hero">
     <div class="hero-bg-shape"></div>
     <div class="hero-text">
-      <div class="hero-tag">Disponível para oportunidades</div>
+      <div class="hero-tag" data-pt="Disponível para oportunidades" data-en="Available for opportunities">Disponível para oportunidades</div>
       <h1 class="hero-name">
         Eliandra<br><em>Neto</em>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-pt="Engenheira de Software com paixão por sistemas Unix/Linux, desenvolvimento de software e soluções tecnológicas eficientes." data-en="Software Engineer passionate about Unix/Linux systems, software development, and efficient technology solutions.">
         Engenheira de Software com paixão por sistemas Unix/Linux, desenvolvimento de software e soluções tecnológicas eficientes.
       </p>
       <div class="hero-cta">
-        <a href="#projects" class="btn-primary">Ver Projectos</a>
-        <a href="#contact" class="btn-outline">Entrar em Contacto</a>
+        <a href="#projects" class="btn-primary" data-pt="Ver Projectos" data-en="View Projects">Ver Projectos</a>
+        <a href="#contact" class="btn-outline" data-pt="Entrar em Contacto" data-en="Get in Touch">Entrar em Contacto</a>
       </div>
     </div>
     <div class="hero-photo-wrapper">
       <img class="hero-photo reveal" src="./utils/photo.png" alt="Eliandra Neto" />
       <div class="hero-card accent">
-        <div class="hero-card-label">Actualmente em</div>
+        <div class="hero-card-label" data-pt="Actualmente em" data-en="Currently at">Actualmente em</div>
         <div class="hero-card-value">42 <span>Luanda</span></div>
-        <div class="hero-card-sub">Engenharia de Software · Concluída em Mai 2026</div>
+        <div class="hero-card-sub" data-pt="Engenharia de Software · Concluída em Mai 2026" data-en="Software Engineering · Completed May 2026">Engenharia de Software · Concluída em Mai 2026</div>
       </div>
       <div class="hero-card">
-        <div class="hero-card-label">Localização</div>
+        <div class="hero-card-label" data-pt="Localização" data-en="Location">Localização</div>
         <div class="hero-card-value" style="font-size:1.2rem;">Luanda, Angola</div>
         <div class="hero-card-sub">Open to remote opportunities</div>
       </div>
@@ -78,37 +84,37 @@
   <section id="about">
     <div class="about-grid">
       <div class="about-left reveal">
-        <div class="section-label">Sobre mim</div>
-        <h2 class="section-title">Código com <em>propósito</em></h2>
+        <div class="section-label" data-pt="Sobre mim" data-en="About me">Sobre mim</div>
+        <h2 class="section-title" data-pt-html="Código com &lt;em&gt;propósito&lt;/em&gt;" data-en-html="Code with &lt;em&gt;purpose&lt;/em&gt;">Código com <em>propósito</em></h2>
         <div class="divider"></div>
-        <blockquote class="about-quote">
+        <blockquote class="about-quote" data-pt="&quot;Foco na qualidade, desempenho e aprendizagem contínua.&quot;" data-en="&quot;Focused on quality, performance, and continuous learning.&quot;">
           "Foco na qualidade, desempenho e aprendizagem contínua."
         </blockquote>
       </div>
       <div class="reveal" style="transition-delay:0.15s">
         <div class="about-text">
-          <p>
+          <p data-pt="Sou Eliandra Neto, Engenheira de Software formada pela 42 Luanda, com formação técnica sólida em Informática pelo Complexo Escolar Girassol. A minha jornada na tecnologia combina curiosidade académica com experiência prática em projectos reais." data-en="I'm Eliandra Neto, a Software Engineer trained at 42 Luanda, with a solid technical background in Computer Science from Complexo Escolar Girassol. My journey in technology combines academic curiosity with hands-on experience in real-world projects.">
             Sou Eliandra Neto, Engenheira de Software formada pela 42 Luanda, com formação técnica sólida em Informática pelo Complexo Escolar Girassol. A minha jornada na tecnologia combina curiosidade académica com experiência prática em projectos reais.
           </p>
-          <p>
+          <p data-pt="Tenho experiência em programação em C, desenvolvimento web, administração de sistemas Linux e infraestrutura com Docker. Acredito que as melhores soluções nascem da colaboração, da atenção ao detalhe e da vontade constante de aprender mais." data-en="I have experience in C programming, web development, Linux systems administration, and infrastructure with Docker. I believe the best solutions come from collaboration, attention to detail, and a constant drive to learn more.">
             Tenho experiência em programação em C, desenvolvimento web, administração de sistemas Linux e infraestrutura com Docker. Acredito que as melhores soluções nascem da colaboração, da atenção ao detalhe e da vontade constante de aprender mais.
           </p>
         </div>
         <div class="about-details">
           <div class="about-detail">
-            <div class="about-detail-label">Email</div>
+            <div class="about-detail-label" data-pt="Email" data-en="Email">Email</div>
             <div class="about-detail-value">eliandrasibo12@gmail.com</div>
           </div>
           <div class="about-detail">
-            <div class="about-detail-label">Telefone</div>
+            <div class="about-detail-label" data-pt="Telefone" data-en="Phone">Telefone</div>
             <div class="about-detail-value">+244 936 647 655</div>
           </div>
           <div class="about-detail">
-            <div class="about-detail-label">GitHub</div>
+            <div class="about-detail-label" data-pt="GitHub" data-en="GitHub">GitHub</div>
             <div class="about-detail-value">github.com/EllyNeto</div>
           </div>
           <div class="about-detail">
-            <div class="about-detail-label">LinkedIn</div>
+            <div class="about-detail-label" data-pt="LinkedIn" data-en="LinkedIn">LinkedIn</div>
             <div class="about-detail-value">in/eliandra-neto</div>
           </div>
         </div>
@@ -119,14 +125,14 @@
   <!-- Skills -->
   <section id="skills">
     <div class="reveal">
-      <div class="section-label">Competências</div>
-      <h2 class="section-title">O que eu <em>domino</em></h2>
+      <div class="section-label" data-pt="Competências" data-en="Skills">Competências</div>
+      <h2 class="section-title" data-pt-html="O que eu &lt;em&gt;domino&lt;/em&gt;" data-en-html="What I &lt;em&gt;master&lt;/em&gt;">O que eu <em>domino</em></h2>
       <div class="divider"></div>
     </div>
     <div class="skills-grid">
       <div class="skill-group reveal" style="transition-delay:0.1s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/CS.svg" alt="C# e C" />
-        <div class="skill-group-title">Linguagens</div>
+        <div class="skill-group-title" data-pt="Linguagens" data-en="Languages">Linguagens</div>
         <div class="skill-tags">
           <span class="skill-tag rose">C</span>
           <span class="skill-tag rose">C#</span>
@@ -137,7 +143,7 @@
       </div>
       <div class="skill-group reveal" style="transition-delay:0.2s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/React-Dark.svg" alt="React" />
-        <div class="skill-group-title">Frontend & Web</div>
+        <div class="skill-group-title" data-pt="Frontend &amp; Web" data-en="Frontend &amp; Web">Frontend & Web</div>
         <div class="skill-tags">
           <span class="skill-tag rose">React</span>
           <span class="skill-tag">HTML</span>
@@ -146,7 +152,7 @@
       </div>
       <div class="skill-group reveal" style="transition-delay:0.3s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/PostgreSQL-Dark.svg" alt="PostgreSQL" />
-        <div class="skill-group-title">Bases de Dados</div>
+        <div class="skill-group-title" data-pt="Bases de Dados" data-en="Databases">Bases de Dados</div>
         <div class="skill-tags">
           <span class="skill-tag rose">MySQL</span>
           <span class="skill-tag">PostgreSQL</span>
@@ -154,7 +160,7 @@
       </div>
       <div class="skill-group reveal" style="transition-delay:0.4s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Docker.svg" alt="Docker" />
-        <div class="skill-group-title">DevOps & Infra</div>
+        <div class="skill-group-title" data-pt="DevOps &amp; Infra" data-en="DevOps &amp; Infra">DevOps & Infra</div>
         <div class="skill-tags">
           <span class="skill-tag rose">Docker</span>
           <span class="skill-tag">NGINX</span>
@@ -163,7 +169,7 @@
       </div>
       <div class="skill-group reveal" style="transition-delay:0.5s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Git.svg" alt="Git" />
-        <div class="skill-group-title">Ferramentas</div>
+        <div class="skill-group-title" data-pt="Ferramentas" data-en="Tools">Ferramentas</div>
         <div class="skill-tags">
           <span class="skill-tag rose">Git</span>
           <span class="skill-tag">Makefile</span>
@@ -172,12 +178,12 @@
       </div>
       <div class="skill-group reveal" style="transition-delay:0.6s">
         <img class="skill-group-icon" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/LinkedIn.svg" alt="Networking e colaboração" />
-        <div class="skill-group-title">Soft Skills</div>
+        <div class="skill-group-title" data-pt="Soft Skills" data-en="Soft Skills">Soft Skills</div>
         <div class="skill-tags">
-          <span class="skill-tag">Trabalho em equipa</span>
-          <span class="skill-tag">Liderança</span>
-          <span class="skill-tag">Adaptabilidade</span>
-          <span class="skill-tag">Comunicação</span>
+          <span class="skill-tag" data-pt="Trabalho em equipa" data-en="Teamwork">Trabalho em equipa</span>
+          <span class="skill-tag" data-pt="Liderança" data-en="Leadership">Liderança</span>
+          <span class="skill-tag" data-pt="Adaptabilidade" data-en="Adaptability">Adaptabilidade</span>
+          <span class="skill-tag" data-pt="Comunicação" data-en="Communication">Comunicação</span>
         </div>
       </div>
     </div>
@@ -186,20 +192,20 @@
   <!-- Projects -->
   <section id="projects">
     <div class="reveal">
-      <div class="section-label">Projectos</div>
-      <h2 class="section-title">O que <em>construí</em></h2>
+      <div class="section-label" data-pt="Projectos" data-en="Projects">Projectos</div>
+      <h2 class="section-title" data-pt-html="O que &lt;em&gt;construí&lt;/em&gt;" data-en-html="What I &lt;em&gt;built&lt;/em&gt;">O que <em>construí</em></h2>
       <div class="divider"></div>
     </div>
     <div class="projects-grid">
       <div class="project-card reveal" style="transition-delay:0.1s">
-        <span class="project-period">Mar 2026 — Jun 2026</span>
+        <span class="project-period" data-pt="Mar 2026 — Jun 2026" data-en="Mar 2026 — Jun 2026">Mar 2026 — Jun 2026</span>
         <h3 class="project-title">Zyder</h3>
-        <div class="project-org">42 Luanda ·  DevOps & Sistemas</div>
+        <div class="project-org" data-pt="42 Luanda ·  DevOps &amp; Sistemas" data-en="42 Luanda · DevOps &amp; Systems">42 Luanda ·  DevOps & Sistemas</div>
         <ul class="project-desc">
-          <li>Desenvolvimento de um chat funcional inspirado em um sistema multiplataforma, escrito em TypeScript.</li>
-          <li>Implementação de troca de mensagens em tempo real.</li>
-          <li>Gestão rigorosa de recursos e tratamento de erros.</li>
-          <li>Aplicação aprofundada de programação orientada a objetos.</li>
+          <li data-pt="Desenvolvimento de um chat funcional inspirado em um sistema multiplataforma, escrito em TypeScript." data-en="Development of a functional chat inspired by a cross-platform system, written in TypeScript.">Desenvolvimento de um chat funcional inspirado em um sistema multiplataforma, escrito em TypeScript.</li>
+          <li data-pt="Implementação de troca de mensagens em tempo real." data-en="Implementation of real-time message exchange.">Implementação de troca de mensagens em tempo real.</li>
+          <li data-pt="Gestão rigorosa de recursos e tratamento de erros." data-en="Rigorous resource management and error handling.">Gestão rigorosa de recursos e tratamento de erros.</li>
+          <li data-pt="Aplicação aprofundada de programação orientada a objetos." data-en="In-depth application of object-oriented programming.">Aplicação aprofundada de programação orientada a objetos.</li>
         </ul>
         <div class="project-tech">
           <span class="tech-badge">TypeScript</span>
@@ -210,14 +216,14 @@
         </div>
       </div>
       <div class="project-card reveal" style="transition-delay:0.25s">
-        <span class="project-period">Ago 2025 — Set 2025</span>
+        <span class="project-period" data-pt="Ago 2025 — Set 2025" data-en="Aug 2025 — Sep 2025">Ago 2025 — Set 2025</span>
         <h3 class="project-title">Infrawatch</h3>
-        <div class="project-org">42 Luanda/RCS ANGOLA · DevOps & Sistemas</div>
+        <div class="project-org" data-pt="42 Luanda/RCS ANGOLA · DevOps &amp; Sistemas" data-en="42 Luanda/RCS ANGOLA · DevOps &amp; Systems">42 Luanda/RCS ANGOLA · DevOps & Sistemas</div>
         <ul class="project-desc">
-          <li>Sistema de monitoramento de infra-estruturas(servidores, aplicações, endpoints).</li>
-          <li>Configuração e orquestração de serviços com persistência de dados.</li>
-          <li>Aplicação de conceitos de administração de sistemas.</li>
-          <li>Gestão de dados, alertas e relatórios.</li>
+          <li data-pt="Sistema de monitoramento de infra-estruturas(servidores, aplicações, endpoints)." data-en="Infrastructure monitoring system (servers, applications, endpoints).">Sistema de monitoramento de infra-estruturas(servidores, aplicações, endpoints).</li>
+          <li data-pt="Configuração e orquestração de serviços com persistência de dados." data-en="Configuration and orchestration of services with data persistence.">Configuração e orquestração de serviços com persistência de dados.</li>
+          <li data-pt="Aplicação de conceitos de administração de sistemas." data-en="Application of systems administration concepts.">Aplicação de conceitos de administração de sistemas.</li>
+          <li data-pt="Gestão de dados, alertas e relatórios." data-en="Management of data, alerts, and reports.">Gestão de dados, alertas e relatórios.</li>
         </ul>
         <div class="project-tech">
           <span class="tech-badge">TypeScript</span>
@@ -245,29 +251,29 @@
   <!-- Education -->
   <section id="education">
     <div class="reveal">
-      <div class="section-label">Formação</div>
-      <h2 class="section-title">O meu <em>percurso</em></h2>
+      <div class="section-label" data-pt="Formação" data-en="Education">Formação</div>
+      <h2 class="section-title" data-pt-html="O meu &lt;em&gt;percurso&lt;/em&gt;" data-en-html="My &lt;em&gt;journey&lt;/em&gt;">O meu <em>percurso</em></h2>
       <div class="divider"></div>
     </div>
     <div class="edu-grid">
       <div class="edu-card featured reveal" style="transition-delay:0.1s">
         <h3 class="edu-school">42 Luanda</h3>
-        <div class="edu-degree">Engenharia de Software</div>
-        <div class="edu-period">Maio 2024 — Maio 2026</div>
-        <div class="edu-note">
+        <div class="edu-degree" data-pt="Engenharia de Software" data-en="Software Engineering">Engenharia de Software</div>
+        <div class="edu-period" data-pt="Maio 2024 — Maio 2026" data-en="May 2024 — May 2026">Maio 2024 — Maio 2026</div>
+        <div class="edu-note" data-pt="Formação prática e intensiva em desenvolvimento de software, algoritmos, sistemas Unix/Linux, trabalho colaborativo e resolução de problemas complexos." data-en="Intensive, hands-on training in software development, algorithms, Unix/Linux systems, collaborative work, and complex problem-solving.">
           Formação prática e intensiva em desenvolvimento de software, algoritmos, sistemas Unix/Linux, trabalho colaborativo e resolução de problemas complexos.
         </div>
       </div>
       <div class="edu-card reveal" style="transition-delay:0.2s">
         <h3 class="edu-school">Complexo Escolar Girassol</h3>
-        <div class="edu-degree">Ensino Médio Técnico em Informática</div>
-        <div class="edu-period">Set 2021 — Jul 2025</div>
-        <div class="edu-note">
+        <div class="edu-degree" data-pt="Ensino Médio Técnico em Informática" data-en="Technical Secondary Education in Computer Science">Ensino Médio Técnico em Informática</div>
+        <div class="edu-period" data-pt="Set 2021 — Jul 2025" data-en="Sep 2021 — Jul 2025">Set 2021 — Jul 2025</div>
+        <div class="edu-note" data-pt="Formação técnica concluída em redes, manutenção de computadores e lógica de programação." data-en="Completed technical training in networking, computer maintenance, and programming logic.">
           Formação técnica concluída em redes, manutenção de computadores e lógica de programação.
         </div>
         <div class="edu-score">
           <div class="edu-score-bar"><div class="edu-score-fill"></div></div>
-          <span class="edu-score-label">15 valores</span>
+          <span class="edu-score-label" data-pt="15 valores" data-en="15 out of 20">15 valores</span>
         </div>
       </div>
     </div>
@@ -276,14 +282,14 @@
   <!-- Languages -->
   <section id="languages">
     <div class="reveal">
-      <div class="section-label">Idiomas</div>
-      <h2 class="section-title">Como me <em>expresso</em></h2>
+      <div class="section-label" data-pt="Idiomas" data-en="Languages">Idiomas</div>
+      <h2 class="section-title" data-pt-html="Como me &lt;em&gt;expresso&lt;/em&gt;" data-en-html="How I &lt;em&gt;express myself&lt;/em&gt;">Como me <em>expresso</em></h2>
       <div class="divider"></div>
     </div>
     <div class="lang-row">
       <div class="lang-item reveal" style="transition-delay:0.1s">
-        <div class="lang-name">Português</div>
-        <div class="lang-level">Nativo</div>
+        <div class="lang-name" data-pt="Português" data-en="Portuguese">Português</div>
+        <div class="lang-level" data-pt="Nativo" data-en="Native">Nativo</div>
         <div class="lang-dots">
           <div class="lang-dot filled"></div>
           <div class="lang-dot filled"></div>
@@ -293,8 +299,8 @@
         </div>
       </div>
       <div class="lang-item reveal" style="transition-delay:0.2s">
-        <div class="lang-name">Inglês</div>
-        <div class="lang-level">Intermediário</div>
+        <div class="lang-name" data-pt="Inglês" data-en="English">Inglês</div>
+        <div class="lang-level" data-pt="Intermediário" data-en="Intermediate">Intermediário</div>
         <div class="lang-dots">
           <div class="lang-dot filled"></div>
           <div class="lang-dot filled"></div>
@@ -304,8 +310,8 @@
         </div>
       </div>
       <div class="lang-item reveal" style="transition-delay:0.3s">
-        <div class="lang-name">Francês</div>
-        <div class="lang-level">Iniciante</div>
+        <div class="lang-name" data-pt="Francês" data-en="French">Francês</div>
+        <div class="lang-level" data-pt="Iniciante" data-en="Beginner">Iniciante</div>
         <div class="lang-dots">
           <div class="lang-dot filled"></div>
           <div class="lang-dot"></div>
@@ -320,10 +326,10 @@
   <!-- Contact -->
   <section id="contact">
     <div class="reveal">
-      <div class="section-label">Contacto</div>
-      <h2 class="section-title">Vamos <em>trabalhar</em> juntos?</h2>
+      <div class="section-label" data-pt="Contacto" data-en="Contact">Contacto</div>
+      <h2 class="section-title" data-pt-html="Vamos &lt;em&gt;trabalhar&lt;/em&gt; juntos?" data-en-html="Let's &lt;em&gt;work&lt;/em&gt; together?">Vamos <em>trabalhar</em> juntos?</h2>
       <div class="divider"></div>
-      <p class="contact-sub">
+      <p class="contact-sub" data-pt="Aberta a oportunidades, colaborações e projectos desafiantes. Não hesites em entrar em contacto." data-en="Open to opportunities, collaborations, and challenging projects. Feel free to get in touch.">
         Aberta a oportunidades, colaborações e projectos desafiantes. Não hesites em entrar em contacto.
       </p>
       <div class="contact-links">
@@ -337,12 +343,55 @@
 
   <!-- Footer -->
   <footer>
-    <span>© 2026 Eliandra Neto <span class="footer-dot">·</span> Todos os direitos reservados</span>
+    <span>© 2026 Eliandra Neto <span class="footer-dot">·</span> <span data-pt="Todos os direitos reservados" data-en="All rights reserved">Todos os direitos reservados</span></span>
     <span>Luanda, Angola</span>
   </footer>
 
   <script>
 
+    // Language toggle (PT / EN)
+    (function () {
+      const STORAGE_KEY = 'site-lang';
+      const root = document.documentElement;
+
+      function applyLanguage(lang) {
+        const isEn = lang === 'en';
+        root.setAttribute('lang', lang);
+        document.body.classList.toggle('lang-en', isEn);
+
+        document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+          el.textContent = isEn ? el.dataset.en : el.dataset.pt;
+        });
+
+        document.querySelectorAll('[data-pt-html][data-en-html]').forEach(el => {
+          el.innerHTML = isEn ? el.dataset.enHtml : el.dataset.ptHtml;
+        });
+
+        document.querySelectorAll('.lang-toggle').forEach(btn => {
+          btn.classList.toggle('is-en', isEn);
+          btn.setAttribute('aria-label', isEn ? 'Switch to Portuguese' : 'Mudar para Inglês');
+        });
+      }
+
+      function getInitialLanguage() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'pt' || saved === 'en') return saved;
+        return navigator.language && navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'pt';
+      }
+
+      function toggleLanguage() {
+        const current = root.getAttribute('lang') === 'en' ? 'en' : 'pt';
+        const next = current === 'pt' ? 'en' : 'pt';
+        localStorage.setItem(STORAGE_KEY, next);
+        applyLanguage(next);
+      }
+
+      document.querySelectorAll('.lang-toggle').forEach(btn => {
+        btn.addEventListener('click', toggleLanguage);
+      });
+
+      applyLanguage(getInitialLanguage());
+    })();
 
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');

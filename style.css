@@ -91,6 +91,39 @@
     .mobile-only-actions {
       display: none;
     }
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: inherit;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: var(--stone-300);
+      background: transparent;
+      border: 1px solid var(--stone-300);
+      border-radius: 20px;
+      padding: 0.32rem 0.7rem;
+      cursor: pointer;
+      transition: color 0.25s, border-color 0.25s, background 0.25s;
+      white-space: nowrap;
+    }
+    .lang-toggle:hover {
+      border-color: var(--rose-soft);
+      background: var(--rose-light);
+    }
+    .lang-toggle .lang-toggle-pt,
+    .lang-toggle .lang-toggle-en {
+      color: var(--stone-300);
+      transition: color 0.25s;
+    }
+    .lang-toggle .lang-toggle-sep {
+      color: var(--stone-300);
+      opacity: 0.6;
+    }
+    .lang-toggle .lang-toggle-pt { color: var(--charcoal); }
+    .lang-toggle.is-en .lang-toggle-pt { color: var(--stone-300); }
+    .lang-toggle.is-en .lang-toggle-en { color: var(--rose-deep); }
     .nav-toggle {
       display: none;
       flex-direction: column;
@@ -639,6 +672,11 @@
         border-bottom: 1px solid var(--stone-300);
         padding-bottom: 2px;
         transition: color 0.25s, border-color 0.25s;
+      }
+      .mobile-only-actions .lang-toggle {
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.9rem;
       }
 
       /* Hero section responsiveness */
